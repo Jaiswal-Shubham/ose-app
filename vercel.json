@@ -4,7 +4,15 @@
     { "src": "api/index.ts", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/index.ts" },
+    { 
+      "src": "/api/(.*)",
+      "dest": "api/index.ts",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+      } 
+    },
     { "src": "/(.*)", "dest": "frontend/$1" }
   ]
 }
