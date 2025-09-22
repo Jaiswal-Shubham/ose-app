@@ -1,14 +1,30 @@
 {
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "/api/"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/frontend/"
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "outputDirectory": "dist"
       }
-    ],
-    "installCommand": "npm install --prefix frontend && npm install --prefix api",
-    "buildCommand": "npm run build --prefix frontend && npm run migrate --prefix api"
-  }
+    },
+    {
+      "src": "api/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "distDir": "api"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/dist/$1"
+    }
+  ],
+  "installCommand": "npm install --prefix frontend && npm install --prefix api",
+  "buildCommand": "npm run build --prefix frontend && npm run migrate --prefix api"
+}
