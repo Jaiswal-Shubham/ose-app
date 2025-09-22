@@ -1,0 +1,45 @@
+.primary-section, .case-study-section, .protection-section, .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  max-width: none;
+  padding: 24px 64px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .primary-section, .case-study-section, .protection-section, .contact-section {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .primary-section, .case-study-section, .protection-section, .contact-section {
+    gap: 32px;
+  }
+}
+
+.title-subtitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.primary-title {
+  color: #FFF;
+  text-align: center;
+  font: 700 64px/120% 'Sora', sans-serif;
+  max-width: 100%;
+  width: 100%;
+}
+
+.primary-subtitle {
+  max-width: 720px;
+  color: #F5F7FA;
+  text-align: center;
+  font: 400 18px/150% 'Roboto', sans-serif;
+}

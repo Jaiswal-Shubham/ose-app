@@ -1,0 +1,51 @@
+.protection-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 60px;
+}
+
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-number {
+  color: #FF8AB2;
+  font: 400 48px/120% 'Sora', sans-serif;
+}
+
+@media (max-width: 991px) {
+  .step-number {
+    font-size: 36px;
+  }
+}
+
+.step-title {
+  padding-top: 4px;
+  color: #FFF;
+  font: 600 40px/120% 'Sora', sans-serif;
+}
+
+.step-description {
+  color: #F5F7FA;
+  font: 400 20px/150% 'Roboto', sans-serif;
+}

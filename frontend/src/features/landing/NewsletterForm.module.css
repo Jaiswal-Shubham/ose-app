@@ -1,0 +1,44 @@
+.newsletter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.newsletter-label {
+  color: #FFF;
+  font: 400 14px/150% 'Sora', sans-serif;
+  margin-bottom: 8px;
+}
+
+.newsletter-input-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.newsletter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #FF518C 0%, #5C3994 100%);
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  text-align: center;
+  font: 400 16px/150% 'Sora', sans-serif;
+  height: 38px;
+}
+
+.newsletter-form-field {
+  flex: 1 0 0;
+}
+
+/* This specifically hides the label within the newsletter form */
+.newsletter-form-field :global(.field-label) {
+  display: none;
+}

@@ -1,0 +1,91 @@
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #FFF;
+  font: 400 14px/150% 'Sora', sans-serif;
+}
+
+.required-asterisk {
+  color: #FF518C;
+}
+
+.form-input {
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background-color: #001331;
+  padding: 12px;
+  color: #D2D2D3;
+  font: 400 14px/150% 'Roboto', sans-serif;
+}
+
+.form-input::placeholder {
+  color: #8E95A9;
+  OPACITY:1
+}
+
+textarea.form-input {
+  resize: vertical;
+}
+
+.field-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.validation-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  width:  30px;
+  height: 30px;
+}
+
+/* --- THIS IS THE FIX --- */
+.field-icon {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.helper-text {
+  color: #EF4444;
+  font-size: 12px;
+  margin-top: 4px;
+  padding-left: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus,
+.form-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #001331 inset !important;
+  -webkit-text-fill-color: #D2D2D3 !important;
+  background-color: #001331 !important;
+  color: #D2D2D3 !important;
+}
+
+.form-input:-moz-autofill {
+  background-color: #001331 !important;
+  color: #D2D2D3 !important;
+}

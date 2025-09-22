@@ -1,0 +1,14 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "/api/"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/frontend/"
+      }
+    ],
+    "installCommand": "npm install --prefix frontend && npm install --prefix api",
+    "buildCommand": "npm run build --prefix frontend && npm run migrate --prefix api"
+  }
