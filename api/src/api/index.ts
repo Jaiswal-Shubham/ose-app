@@ -10,10 +10,10 @@ const app: Express = express();
 
 
 const corsOptions = {
-  origin: 'https://ose-app-fullstack.vercel.app/',
+  origin: 'https://ose-app-fullstack.vercel.app',
   credentials: true,
   
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
