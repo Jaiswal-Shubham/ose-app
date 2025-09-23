@@ -28,8 +28,10 @@ export const useApi = <TData, TBody>(endpoint: string) => {
     setData(null);
     setError(null);
 
+    const apiUrl = import.meta.env.VITE_API_URL || '';
+
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api${endpoint}`, {
+      const response = await fetch(`${apiUrl}/api${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
